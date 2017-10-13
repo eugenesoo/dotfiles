@@ -11,6 +11,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ervandew/supertab'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-eunuch'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 "add column number
 set number
@@ -22,15 +25,6 @@ set background=dark
 colorscheme solarized
 "set updatetime to 250ms
 set updatetime=250
-"configurations for async linter
-"always keep sign gutter open
-"let g:ale_sign_column_always = 1
-"enable changing of signcolumn color
-"let g:ale_change_sign_column_color = 1
-"remove signcolumn colour
-"highlight clear SignColumn
-"set signcolumn colour when there is an error
-"highlight ALESignColumnWithErrors ctermbg=37
 "only enable javascript eslint linter for ale
 let g:ale_linters = {
 \  'javascript': ['eslint']
@@ -47,4 +41,9 @@ let g:airline_theme='solarized'
 set noshowmode
 "let vim-airline handle errors in statusline
 let g:airline#extensions#ale#enabled = 1
-
+"set tab/spaces default
+set tabstop=2
+"when indenting with '>', use 2 space width
+set shiftwidth=2
+"on pressing tab, insert 2 space
+set expandtab
