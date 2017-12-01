@@ -14,6 +14,8 @@ Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-eunuch'
 Plug 'jiangmiao/auto-pairs'
+Plug 'drn/zoomwin-vim'
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 "add column number
 set number
@@ -47,3 +49,19 @@ set tabstop=2
 set shiftwidth=2
 "on pressing tab, insert 2 space
 set expandtab
+" Disable Arrow keys in Escape mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+" Disable Arrow keys in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+" mouse enable in vim
+set mouse=a
+" set clipboard to macosx clipboard
+set clipboard=unnamed
+" let nerdtree show hidden files
+let NERDTreeShowHidden=1
